@@ -1,0 +1,924 @@
+I (5184) esp_netif_handlers: example_netif_sta ip: 192.168.1.101, mask: 255.255.255.0, gw: 192.168.1.1
+I (5184) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.101
+I (6094) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:764d:bdff:fe9d:b630, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+I (6098) example_common: Connected to example_netif_sta
+I (6104) example_common: - IPv4 address: 192.168.1.101,
+I (6109) example_common: - IPv6 address: fe80:0000:0000:0000:764d:bdff:fe9d:b630, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+I (6121) VolcRTCDemo: [ 1 ] Mount sdcard
+I (6125) SDCARD: Using 1-line SD mode,  base path=/sdcard
+I (6131) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6141) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6150) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6159) AUDIO_THREAD: The esp_periph task allocate stack on internal memory
+I (6209) SDCARD: CID name SD64G!
+
+W (6667) i2c_bus_v2: I2C master handle is NULL, will create new one
+I (6671) DRV8311: ES8311 in Slave mode
+I (6681) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (6688) ES7210: ES7210 in Slave mode
+I (6697) ES7210: Enable ES7210_INPUT_MIC1
+I (6700) ES7210: Enable ES7210_INPUT_MIC2
+I (6703) ES7210: Enable ES7210_INPUT_MIC3
+W (6706) ES7210: Enable TDM mode. ES7210_SDP_INTERFACE2_REG12: 2
+I (6711) ES7210: config fmt 60
+I (6713) AUDIO_HAL: Codec mode is 3, Ctrl:1
+I (6721) VolcRTCDemo: [2.1] audio_board & audio_board_key init
+I (6722) VolcRTCDemo: Starting again!
+
+I (6730) AUDIO_THREAD: The button_task task allocate stack on external memory
+I (6827) main_task: Returned from app_main()
+I (9306) AUDIO_PIPELINE: [3.0] Create audio pipeline for recording
+I (9306) AUDIO_PIPELINE: [3.2] Create i2s stream to read audio data from codec chip
+I (9311) AUDIO_PIPELINE: [3.3] Create audio encoder to handle data
+I (9317) AUDIO_PIPELINE: [3.4] Register all elements to audio pipeline
+I (9324) AUDIO_PIPELINE: [3.1] Create algorithm stream for aec
+I (9331) AUDIO_PIPELINE: [3.5] Link it together [codec_chip]-->i2s_stream-->audio_encoder-->raw
+I (9340) AUDIO_PIPELINE: link el->rb, el:0x3c2039e8, tag:i2s, rb:0x3c204518
+I (9348) AUDIO_PIPELINE: link el->rb, el:0x3c203ec4, tag:algo, rb:0x3c206680
+I (9356) AUDIO_PIPELINE: link el->rb, el:0x3c203d08, tag:g711a, rb:0x3c2067f8
+I (9363) AUDIO_PIPELINE: [ 2 ] Start codec chip
+I (9369) AUDIO_PIPELINE: [3.0] Create audio pipeline for playback
+I (9375) AUDIO_PIPELINE: [3.2] Create i2s stream to write data to codec chip
+I (9384) AUDIO_PIPELINE: [3.4] Register all elements to audio pipeline
+I (9390) AUDIO_PIPELINE: [3.5] Link it together raw-->audio_decoder-->i2s_stream-->[codec_chip]
+I (9400) AUDIO_PIPELINE: link el->rb, el:0x3c2075d4, tag:raw, rb:0x3c207ec4
+I (9407) AUDIO_PIPELINE: link el->rb, el:0x3c207ce4, tag:dec, rb:0x3c20a02c
+W (9415) AUDIO_BOARD: The board has already been initialized!
+I (9422) AUDIO_PIPELINE: Func:audio_pipeline_run, Line:359, MEM Total:6264632 Bytes, Inter:70983 Bytes, Dram:70983 Bytes, Dram largest free:31716Bytes
+
+W (9436) AUDIO_ELEMENT: [i2s] AEL_MSG_CMD_RESUME,state:1
+W (9442) AUDIO_ELEMENT: [algo] AEL_MSG_CMD_RESUME,state:1
+W (9458) AUDIO_ELEMENT: [g711a] AEL_MSG_CMD_RESUME,state:1
+I (9458) AUDIO_PIPELINE: Pipeline started
+I (9459) AUDIO_PIPELINE: Func:audio_pipeline_run, Line:359, MEM Total:6080944 Bytes, Inter:40555 Bytes, Dram:40555 Bytes, Dram largest free:31716Bytes
+
+W (9473) AUDIO_ELEMENT: [dec] AEL_MSG_CMD_RESUME,state:1
+W (9479) AUDIO_ELEMENT: [i2s] AEL_MSG_CMD_RESUME,state:1
+I (9485) AUDIO_PIPELINE: Pipeline started
+1970-01-01 00:00:08.650 [I]  339  (): config : configParams.debug.log_to_console from 0 to 1
+1970-01-01 00:00:08.657 [I]    VolcEngineRTCLite.c:105  byte_rtc_init(): ****************** HELLO BOOKA (671221aa298a540183df32d9)(1.56.001.58)(81d807dbfc01a9fd5954559c8ee6f8a5d76b0b92) ********************
+1970-01-01 00:00:08.691 [I]    VolcEngineRTCLite.c:110  byte_rtc_init(): Platform 
+1970-01-01 00:00:08.699 [I]    VolcEngineRTCLite.c:113  byte_rtc_init(): OsVersion 
+1970-01-01 00:00:08.706 [I]    VolcEngineRTCLite.c:116  byte_rtc_init(): CompilerInfo GCC/13.2.0
+1970-01-01 00:00:08.714 [I]         GlobalParams.c:145  globalPrintParams(): pGlobalParams->configParams.debug.log_to_console from 0 to 1
+1970-01-01 00:00:08.726 [I]         GlobalParams.c:147  globalPrintParams(): pGlobalParams->configParams.rtc.root_path  to .
+1970-01-01 00:00:08.738 [I]  123  (): task threadNum 0
+1970-01-01 00:00:08.743 [I]  63   (): liteInterrupterCreate fd 55 interrupter fd 55 fd 56
+1970-01-01 00:00:08.751 [E]  270  (): operation returned status code: 0x00000009
+1970-01-01 00:00:08.760 [I]  56   (): createKcpSession timerId 1
+1970-01-01 00:00:08.765 [I]  56   (): rx_ev_loop_timer_repeat_task_callback timerId 2
+1970-01-01 00:00:08.772 [I]  56   (): connectionServiceCreate timerId 3
+1970-01-01 00:00:08.809 [I]  598  (): engineImplXStart 
+1970-01-01 00:00:08.809 [I]        AccessService.c:196  __accessSeviceLoadNodesFromCache(): load access nodes from cache. nodes 0 status 34
+1970-01-01 00:00:08.815 [I]  189  ():  PConnectionService :  S_CON_PREPARE --> S_CON_PREPARE, Retry 1/0 Wait 511 Ms
+1970-01-01 00:00:08.825 [I]  189  ():  Access :  S_ACCESS_INIT --> S_ACCESS_INIT, Retry 1/0 Wait 4 Ms
+1970-01-01 00:00:08.835 [I]  56   (): liteHttpCreate timerId 4
+1970-01-01 00:00:08.840 [I]  137  (): trying access domain access.rtc.volcvideo.com
+1970-01-01 00:00:08.848 [I]  189  ():  LiteHttp :  S_IDLE --> S_IDLE, Retry 1/0 Wait 16 Ms
+1970-01-01 00:00:08.855 [I]  1836 (): __S_IDLE_Execute 1
+1970-01-01 00:00:08.860 [I]  1839 (): __S_IDLE_Execute
+1970-01-01 00:00:08.865 [I]  189  ():  LiteHttp :  S_IDLE --> S_INIT, Retry 0/0 Wait 1008299332 Ms
+1970-01-01 00:00:08.874 [I]  189  ():  PConnectionService :  S_CON_PREPARE --> S_CON_INIT, Retry 0/0 Wait 1070398400 Ms
+1970-01-01 00:00:08.884 [I]  73   (): thread (VolcRTCMain)(1009215276) started
+1970-01-01 00:00:08.884 [I]  28   (): thread(VolcRTCMain)(52685) start ....
+1970-01-01 00:00:08.900 [I]  1570 (): __S_INIT_Execute
+1970-01-01 00:00:08.903 [I]  1402 (): resolving host:access.rtc.volcvideo.com
+1970-01-01 00:00:08.891 [I]  105  (): detach thread (VolcRTCMain)(1009215276)
+1970-01-01 00:00:08.935 [I]  56   (): rtsV4Start timerId 5
+1970-01-01 00:00:08.939 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 1/0 Wait 1009249708 Ms
+1970-01-01 00:00:08.945 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 2/0 Wait 1009249708 Ms
+1970-01-01 00:00:08.955 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:08.962 [I]  1026 (): ID 1524895114 resolve host access.rtc.volcvideo.com ip is 139.227.230.75
+1970-01-01 00:00:08.972 [I]  189  ():  LiteHttp :  S_INIT --> S_RESOLVED, Retry 0/0 Wait 1009250196 Ms
+1970-01-01 00:00:08.981 [I]  1431 (): connecting to 139.227.230.75
+1970-01-01 00:00:08.987 [I]  154  (): liteSocketCreate fd 57 socket type 1
+1970-01-01 00:00:09.002 [I]  189  ():  LiteHttp :  S_RESOLVED --> S_CONNECTED, Retry 0/0 Wait 4294967295 Ms
+1970-01-01 00:00:09.509 [I]  189  ():  LiteHttp :  S_CONNECTED --> S_HANDSHARDKED, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:09.511 [I]  189  ():  LiteHttp :  S_HANDSHARDKED --> S_REQ_SENT, Retry 0/0 Wait 5 Ms
+1970-01-01 00:00:09.723 [I]  69   (): kActionAccess time used 849 ms
+1970-01-01 00:00:09.724 [I]  213  (): access node size:3
+1970-01-01 00:00:09.724 [I]  218  (): Node 180.184.169.115:80
+1970-01-01 00:00:09.729 [I]  218  (): Node 180.184.169.115:443
+1970-01-01 00:00:09.735 [I]  218  (): Node 101.71.125.43:443
+1970-01-01 00:00:09.742 [E]  309  (): operation returned status code: 0x00000009
+1970-01-01 00:00:09.747 [I]        AccessService.c:103  __accessServiceUpdateNodesInCache(): Succes to save access nodes(size = 3) to cache file
+1970-01-01 00:00:09.760 [I]  189  ():  PConnectionService :  S_CON_INIT --> S_CON_CONNECTING, Retry 0/0 Wait 108 Ms
+1970-01-01 00:00:09.770 [I]  377  (): Update node, current index -1
+1970-01-01 00:00:09.776 [I]    ConnectionService.c:304  startConnectWithNode(): iceRemoteCandidate: candidate:1832034026 1 udp 2122260223 180.184.169.115 80 typ host generation 0 ufrag tn50 network-id 1 network-cost 10 from ACCESS
+1970-01-01 00:00:09.796 [I]  1179 (): 
+1970-01-01 00:00:09.800 [I]  424  (): before del timer 1
+1970-01-01 00:00:09.805 [I]  426  (): end del timer 1
+1970-01-01 00:00:09.815 [I]  56   (): createKcpSession timerId 6
+1970-01-01 00:00:09.817 [I]  100  (): ............. Get Ip v4 address 192.168.1.101:0
+1970-01-01 00:00:09.823 [I]  154  (): liteSocketCreate fd 58 socket type 2
+1970-01-01 00:00:09.830 [I]  154  (): liteSocketCreate fd 59 socket type 2
+1970-01-01 00:00:09.836 [E]  177  (): operation returned status code: 0x00000001
+1970-01-01 00:00:09.843 [I]  56   (): iceAgentStartGathering timerId 7
+1970-01-01 00:00:09.850 [I]  668  (): iceAgentStart: UFJFQ8oYw6hx/I/0BMPTBQAABAE=:3MWSTxzaBinCZH7DIhd71QId8V9DXAkD02jMwKZMMj3kRKF4HwEk7bj/TEuS/qa19mNAJl2BDDyA6Y7WVZFFQL59MOy3cyjIXNPTZ8jk23q6cKes0tukqTXpYv5eRA3CA+PkElGOZmRp6BzqpaoYrMnz
+1970-01-01 00:00:09.870 [I]  56   (): iceAgentStart timerId 8
+1970-01-01 00:00:09.876 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 3/0 Wait 0 Ms
+1970-01-01 00:00:09.884 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:09.893 [I]  189  ():  Access :  S_ACCESS_INIT --> S_ACCESS_SUCCESS, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:09.900 [E]  641  (): ID 1524895114  E_LOGIC : NO need keepAlive
+1970-01-01 00:00:09.907 [I]  189  ():  LiteHttp :  S_REQ_SENT --> S_COMPELETED, Retry 0/0 Wait 641 Ms
+1970-01-01 00:00:09.917 [I]  1512 (): ID 1524895114 called
+1970-01-01 00:00:09.922 [I]  424  (): before del timer 4
+1970-01-01 00:00:09.927 [I]  426  (): end del timer 4
+1970-01-01 00:00:09.932 [I]  89   (): unRegister fd 57 type 0
+1970-01-01 00:00:09.937 [I]  1870 (): ID 1524895114 https://access.rtc.volcvideo.com/dispatch/v1/AccessInfo?Action=GetAccessInfo Host:access.rtc.volcvideo.com(139.227.230.75) POST 200(OK) 4830/-1/-1 RT 71 CT 21 HT 505 TT 198 E_LOGIC (NO need keepAlive)
+1970-01-01 00:00:09.960 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_NEW --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 0/0 Wait 1008278028 Ms
+1970-01-01 00:00:09.972 [I]  1213 ():  result 0x0
+1970-01-01 00:00:09.976 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_CHECK_CONNECTION
+1970-01-01 00:00:09.984 [I]  210  (): ice connection state changed to RTC_PEER_CONNECTION_STATE_CONNECTING
+1970-01-01 00:00:09.993 [I]  624  (): 
+1970-01-01 00:00:09.997 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTING, Retry 1/0 Wait 1 Ms
+1970-01-01 00:00:10.007 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 4/0 Wait 4 Ms
+1970-01-01 00:00:10.016 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:10.025 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.075 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:10.130 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:10.184 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:10.219 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.221 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.222 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.239 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CONNECTED, Retry 0/0 Wait 1070252872 Ms
+1970-01-01 00:00:10.240 [I]  56   (): iceAgentConnectedStateSetup timerId 9
+1970-01-01 00:00:10.247 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_CONNECTED
+1970-01-01 00:00:10.255 [I]  210  (): ice connection state changed to RTC_PEER_CONNECTION_STATE_CONNECTED
+1970-01-01 00:00:10.264 [I]  69   (): kActionIce time used 448 ms
+1970-01-01 00:00:10.270 [I]  138  (): serialize success size 36
+1970-01-01 00:00:10.276 [I]  159  (): id: 0, type: ["CheckConnectivity",;
+content: {"needStrictCheck":false,"ts":10270}
+1970-01-01 00:00:10.287 [I]  636  (): id : 0, size: 0, need ack: 36, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:10.296 [I]  624  (): 
+1970-01-01 00:00:10.299 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTING, Retry 2/0 Wait 1070220968 Ms
+1970-01-01 00:00:10.311 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 5/0 Wait 4 Ms
+1970-01-01 00:00:10.320 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:10.344 [I]  864  (): id : 0, size: 25, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 0 content_len 12
+1970-01-01 00:00:10.344 [I]  496  (): MSG-TYPE {"code":200}xV­º
+1970-01-01 00:00:10.349 [I]  416  (): code == 200
+1970-01-01 00:00:10.354 [I]  624  (): 
+1970-01-01 00:00:10.357 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTED, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:10.368 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_JOIN_INIT, Retry 0/0 Wait 4 Ms
+1970-01-01 00:00:10.379 [I]  138  (): serialize success size 1063
+1970-01-01 00:00:10.383 [I]  159  (): id: 1, type: ["joinRoom",;
+content: {"Authorization":"Bearer 001671221aa298a540183df32d9bQCJ0gsBhCJpZwR0amcmAENvemVSVENfSDI2NF9HNzExQV83NDUxNDkyNjcwNjQ5Nzc4MjE2FwB1aWRfNzQ1MTQ5MjY3MDY0OTc2MTgzMgUAAAAAAAAAAQAAAAAAAgAAAAAAAwAAAAAABAAAAAAAIAB6pwnoMqa0wboA7JNKY7NFg0e0JzlTiujWtbGxGyDi1A==","elapse":0,"options":{"enableAutoSubscribe":true,"enableBigRoomMode":false,"enableP2P":false,"enableSceneConfigV2":false,"enableUnBundleMode":false,"subFallbackOption":0,"supportTokenExpireCallBack":true,"supportCheckTokenPrivilege":true,"isLicense":false},"params":{"appId":"671221aa298a540183df32d9","deviceId":"2208e8608ac1e8790900000000000000","deviceType":"linux","memorySize":0,"roomId":"CozeRTC_H264_G711A_7451492670649778216","sdkVersion":"3.56.001.58","rtsVersion":0,"supportedAudioCodecs":["PCMA"],"supportedCodecs":["H264"],"userId":"uid_7451492670649761832"},"roomId":"CozeRTC_H264_G711A_7451492670649778216","sdpInfo":{"mode":0},"sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","timestamp":10377,"userAttributes":{"enableaudio":true,"enablevideo":true,"recvMode":0,"sendMode":0,"supportStreamFlags":0}}
+1970-01-01 00:00:10.482 [I]  636  (): id : 1, size: 0, need ack: 1063, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:10.494 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CONNECTED --> ICE_AGENT_STATE_NOMINATING, Retry 0/0 Wait 1008278028 Ms
+1970-01-01 00:00:10.505 [I]  1213 ():  result 0x0
+1970-01-01 00:00:10.508 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_NOMINATING
+1970-01-01 00:00:10.520 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.568 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_NOMINATING --> ICE_AGENT_STATE_READY, Retry 0/0 Wait 1070252872 Ms
+1970-01-01 00:00:10.568 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_READY
+1970-01-01 00:00:10.865 [I]  864  (): id : 1, size: 3136, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 1 content_len 6491
+1970-01-01 00:00:10.876 [I]  496  (): MSG-TYPE {"isLicense":false,"appId":"671221aa298a540183df32d9","clientId":"uid_7451492670649761832","clients":["uid_7451492670649761832"],"clientsDetail":[{"clientId":"uid_7451492670649761832","attributes":{"supportStreamFlags":0,"supportVideoCodecFlag":257,"enableaudio":true,"enablevideo":true,"recvMode":0,"sendMode":0,"supportAudioCodecFlag":0,"supportScreenCodecFlag":769},"clientJoinTime":10377,"screenStreamEncode":0}],"clientIp":"210.22.151.114","abResult":{"otherConfig":{}},"supportScreenCodecFlag":769,"sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","config":{"engine_VNM":{"fec":{"more_fec_loss":50,"split_len":500,"more_fec_rtt":300,"split_loss":100,"split_rtt":500,"video_matrix_max_num":6,"max_fec_num":4,"max_fec_rtt":500,"more_fec_burst":5},"jitterbuffer":{"min_target_delay":15,"smooth_render":{"max_smooth_delay":50},"video_jb_mode":2,"avsync":{"video":{"enable_close_av_sync":true}},"low_delay":{"enable_low_delay_jitter_mode":true,"limit_extrapolate_localtime_ms":30,"max_jitter_by_frame_bps_var_ms":20}},"pacer":{"enable_pacer":false,"pacer_delay":500,"pacer_times":4.5},"retrans":{"response":{"disable_rtx_rtt":1000,"resend_max_times":12,"rtx_first_rtt":50}},"strategy":{"enable_air_play_up_policy":false,"retran_mode_in_air_play":1},"use_old_configure":false,"bwest":{"gcc":{"overuse_thresh_time":10,"tcc_min_bwe":0,"enable_delaybwe":true,"enable_lossbwe":true,"high_loss":10,"low_loss":2,"overuse_thresh_high":600,"overuse_thresh_low":6},"netest":{"loss_std_small":200,"loss_video_maxbr":200,"enable_losskeep":false,"enable_netest":true,"loss_std_big":300},"sendside_bwe_min":30000}},"engine_firstFrame":{},"videoCaptureEnableVECamera":false,"rateFeedbackConfig":{"engine_feedback":"https://rtc-log-report.bytedance.com/salvage/feedback/report"},"engine_APM_dump_api_global_switch":{},"engine_VPM":{"hash_check":{"frequency":15},"ondemand":{"enable":false,"default":3},"perf_manager":{},"rc":{},"screen_psnr":{},"screen_similarity":{},"autoSim":{},"key_frame_control":{},"low_bitrate_adapt":{},"no_scaling":{},"screen_resolution_fps_table":{},"simfallback":{},"video_send_dynamic_codec_params":{},"SubDynamicPerf":{},"p2p_enable_framerate_control":{},"roi":{},"simPerf":{},"pre_a":{"EncUsageLow":44,"EncUsageHigh":150},"psnr":{},"video_send_grade_config":{}},"fec":"BDRSFEC","networkThreadPriority":2,"network_quality_calculation":{},"targetAudioCodec":"PCMA","deviceScore":-1,"effectProcMode":{"procMode":"single-proc"},"engine_ADM":{"audio_layer":5,"play":{"sr":48000,"chn":1},"record":{"chn":1,"sr":48000}},"engine_Log":{},"engine_video_capture":{},"byteLogLevel":{"stats_freq":2000,"byte_log_level":"warning","enable_websocket":true,"sdk_level":"warning"},"decodeH264V1":-1,"targetScreenCodec":"H264","multiChatMode":false,"engine_Performance":{},"videoCaptureEnableCamera2":true,"client_network":{"jitter_buffer":{"public_params":{"video":{"delay_mode":"extreme_low_delay","target_delay_ms_max":50,"target_delay_ms_min":15},"audio":{"delay_mode":"extreme_low_delay","target_delay_ms_max":300,"target_delay_ms_min":60},"sync":{"audio_video":{"sync_policy":"close"}}}}},"deadLockedAssert":{"deadLockTimes":10,"enableDeadLockAssert":false},"enableWebPubRemb":true,"engine_ANM":{"codec":{"enc_param":{"bitrate":64000,"chn":2,"sr":48000},"mode":1,"use_dtx":false},"fec":{"audio_matrix_max_num":5,"audio_fec_max_times":0}},"engine_PerfController":{},"subChannel_volume":{"volume_scale":0,"channel_switch_delay":3,"volume_Indicate_Interval":1},"support_client_mix":0,"targetCodec":"H264","_device_policy_id":"","encodeH264V1":-1,"engine_ADM_enhancement":{},"join_room_request_sdp_profile":1,"p2pSwitchConfig":{"NormalNetworkQualityLevel":3,"P2P2SFUNetworkProbePeriod":10000,"P2P2SFUNormalNetworkProbeInterval":2500,"P2PMaxRestartTimes":50,"NATProbeTimeout":5000,"SFU2P2PProbeNetworkPeriod":5000,"SFULost":0.0009,"SFURttRelay":20,"SwitchSFUByNetworkQuality":true,"EnableNATProbe":false,"P2PEnableCellularIpv6":false,"P2PEnableSmoothSwitch":true,"P2PMinRttThreshold":10,"SFU2P2PProbeNetworkInterval":48,"SFU2P2PSwitchWeakThreshold":0.3,"P2P2SFUWeakNetworkProbeInterval":900,"P2PEnableIpv6":false,"P2PMaxRttThreshold":100,"SwitchP2PByNetworkQuality":true},"transcodeCustomCodecParams":{},"_abtest_vid":"","engine_APM_48k_pipelines":{},"performance_table":{},"engine_APM_aec_type_switch":{"aec_type_switch_enable":false},"fakeVideo":true,"engine_BAC":{"adm":{},"codec":{}},"engine_videocodec":{"enc_cfg":{},"hw_decode_smooth_output":false,"qsv":{},"temporal_layer_num":1,"bytevc1":{"hw_dec":{},"hw_enc":{"enable":true},"sw_enc":{},"sw_enc_scc":{}},"bytevc1scc":{},"h264":{"bytevc0":{},"enable_h264_sw_hp":false,"enable_x264":false,"hw_dec":{},"hw_enc":{"enable":true,"enable_hp":true},"hw_enc_on_scc":false},"hw_decode_min_dimension":64,"hw_encode_min_dimension":360,"specl_cfg":{"dec_slow_send_strategy":{"max_allowed_cache_frames":0},"enc_adaptiveref":{},"enc_lowlatency":{"enable_lowlatency_rc":false},"enc_qp_statis":{"enable_bytevc1_qp":true}},"svc":{}},"hardware_ear_monitor_in_openlist":false,"autoSub":false,"engine_APM_quality_score":{"enable":false},"sami_config":{"basic_app_key":"rtc_longterm_from_sami","basic_token":"ZPsDVKFwJ65xgxCdmq5fAInMfIditXQYeQnEbFEbG+3fL0hmMuw2+DjLacf7ecvj1ZoBjAOTKOerI3kOgRVurQrhqg9cNy6TI28XkdLwmhnNS0dEeNCq2i+i4Dj32ad4DkQJbI6LhcTdS2R/DI3MuoP01Nc3SF55hkQajojxuWrk8oPSTGLi/AW/A8Q0hHSslfqqgFNSFCO3g36FvqaSJQEpEUNZdp2/u2NHy8ffZeaDNPa/ld2JG49hJIiZbKGKKmoKawQDH9OW6WKkHL/82LoXLxtrIjoso7qrEVWS9E2pHDv7G750CadZRjWaHOY2tuJtT/3IgOpgnILjghzVYw=="},"srtp":false,"edgeAggregation":{"AggConfig":{"dimension":"province"},"AggType":"AggByMaxValServerAndRoom","enable":false},"engine_APM_howl_detect":{},"workThreadPriority":{"workThreadPriority":2},"effectApplyFormat":{"format":"rgba"},"engine_video_src_analysis":{},"kcp":{},"enableFlowControl":false,"rtc_ktv_biz_url":{"ktv_biz_url":"https://common.rtc.volcvideo.com"},"tcc":true,"engine_videoprocess":{"sr_psnr":{},"up_scale":{},"video_denoise":{},"video_high_dynamic_range":{},"video_min_target_framerate":{},"video_mos":{}},"engine_ICE":{},"engine_logStrip":{},"rtx":true},"callId":"2496f748026e48bc86b0c1d835169547_1734944392523014928","vendorConfig":{"enableMultiVendor":false,"vendorCode":0},"eventSessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","pingList":null,"supportVideoCodecFlag":257,"roomId":"CozeRTC_H264_G711A_7451492670649778216","code":200,"attributes":{},"streams":[],"msIP":null,"roomAttributes":{"multiChatMode":false,"bigRoomMode":false,"userNotifyDisabled":false},"relayMessage":null}xV­ºþþþþþþþþþþþþþþþþþ€f)<
+1970-01-01 00:00:11.436 [I]  173  (): code == 200
+1970-01-01 00:00:11.440 [I]  69   (): kActionJoinRoom time used 1063 ms
+1970-01-01 00:00:11.447 [I]  1047 (): use id: uid_7451492670649761832
+1970-01-01 00:00:11.453 [I]  733  (): CozeRTC_H264_G711A_7451492670649778216:uid_7451492670649761832 join room success! 
+1970-01-01 00:00:11.466 [I]  771  (): [network lite] net connection add video send stream , stream id = 1, media ssrc = 1178861519, remote ssrc = 0
+1970-01-01 00:00:11.478 [I]  739  (): [network lite] net connection add audio send stream , stream id = 2, media ssrc = 1855169150, remote ssrc = 0
+1970-01-01 00:00:11.495 [I]  189  ():  StreamPublisher :  S_STREAM_PUBLISH_WAIT --> S_STREAM_PUBLISH_WAIT, Retry 1/0 Wait 1009371048 Ms
+1970-01-01 00:00:11.501 [I]  189  ():  StreamPublisher :  S_STREAM_PUBLISH_WAIT --> S_STREAM_PUBLISH_INIT, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:11.515 [I]  138  (): serialize success size 3135
+1970-01-01 00:00:11.519 [I]  159  (): id: 2, type: ["publish",;
+content: {"attributes":{"audiostream":true,"extaudio":true,"extvideo":true,"firstFrameSessionId":0,"localaudio":true,"localvideo":true,"sourceSSRCs":{"audio":1855169150,"audioRtx":450560261,"video":[1178861519],"videoRtx":[140418600]},"videoDescriptions":[{"framerate":15,"height":240,"maxkbps":6000,"width":240}],"videostream":true},"audio":true,"data":true,"elapse":0,"eventSessionId":"GHvyHimODRObEOr1fRySMwXxPBsVuItE","initStreamId":"EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa","peerConnectionId":"Xd4PoKWwUlPd9ZwfQgpeN3WiStdYMx5R","roomId":"CozeRTC_H264_G711A_7451492670649778216","sdpInfo":{"mode":1,"msid":"EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa","sdp":"v=0\r\no=- 1861417387 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0 1\r\na=msid-semantic: WMS EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa\r\nm=audio 9 UDP/RTP/AVPF 8 8\r\nc=IN IP4 127.0.0.1\r\na=candidate\r\na=msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa gRlppBz6FWsYYevt7gnK5OdRIVrIC0QvkRRIbq1IVbuznmRWyQibKZeUYPD6yqM\r\na=ssrc-group:FID 1855169150 450560261\r\na=ssrc:1855169150 cname:\r\na=ssrc:1855169150 msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa gRlppBz6FWsYYevt7gnK5OdRIVrIC0QvkRRIbq1IVbuznmRWyQibKZeUYPD6yqM\r\na=ssrc:1855169150 mslabel:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa\r\na=ssrc:1855169150 label:gRlppBz6FWsYYevt7gnK5OdRIVrIC0QvkRRIbq1IVbuznmRWyQibKZeUYPD6yqM\r\na=ssrc:450560261 cname:\r\na=ssrc:450560261 msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa gRlppBz6FWsYYevt7gnK5OdRIVrIC0QvkRRIbq1IVbuznmRWyQibKZeUYPD6yqM\r\na=ssrc:450560261 mslabel:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa\r\na=ssrc:450560261 label:gRlppBz6FWsYYevt7gnK5OdRIVrIC0QvkRRIbq1IVbuznmRWyQibKZeUYPD6yqM\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=mid:0\r\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=sendonly\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:8 PCMA/8000\r\na=rtcp-fb:8 nack\r\na=rtcp-fb:8 transport-cc\r\nm=video 9 UDP/RTP/AVPF 125 126\r\nc=IN IP4 127.0.0.1\r\na=candidate\r\na=msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa 3JmXMgpjBjY9SNzurYLfD0edUOe1CGEzmMbDL3Xmy9ApGfCDCcxwqPoMM6eqjTc\r\na=ssrc-group:FID 1178861519 140418600\r\na=ssrc:1178861519 cname:\r\na=ssrc:1178861519 msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa 3JmXMgpjBjY9SNzurYLfD0edUOe1CGEzmMbDL3Xmy9ApGfCDCcxwqPoMM6eqjTc\r\na=ssrc:1178861519 mslabel:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa\r\na=ssrc:1178861519 label:3JmXMgpjBjY9SNzurYLfD0edUOe1CGEzmMbDL3Xmy9ApGfCDCcxwqPoMM6eqjTc\r\na=ssrc:140418600 cname:\r\na=ssrc:140418600 msid:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa 3JmXMgpjBjY9SNzurYLfD0edUOe1CGEzmMbDL3Xmy9ApGfCDCcxwqPoMM6eqjTc\r\na=ssrc:140418600 mslabel:EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa\r\na=ssrc:140418600 label:3JmXMgpjBjY9SNzurYLfD0edUOe1CGEzmMbDL3Xmy9ApGfCDCcxwqPoMM6eqjTc\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=mid:1\r\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=sendonly\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:125 H264/90000\r\na=fmtp:125 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\r\na=rtpmap:126 rtx/90000\r\na=fmtp:126 apt=125\r\na=rtcp-fb:125 nack\r\na=rtcp-fb:125 transport-cc\r\n","type":"offer"},"sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","state":"relay","video":true}
+1970-01-01 00:00:11.797 [I]  636  (): id : 2, size: 0, need ack: 3135, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:11.807 [I]  189  ():  RoomImplX :  S_ROOM_JOIN_INIT --> S_ROOM_JOINED, Retry 0/0 Wait 1009368684 Ms
+1970-01-01 00:00:11.825 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:11.832 [I]  864  (): id : 1, size: 237, need ack: 1, is ack: 0 enable_encrypt 1 enable_zip 1 content_len 241
+1970-01-01 00:00:11.840 [I]  603  (): {"messageId":"edc59406f050408cac355aad8b58dd64","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc"}
+1970-01-01 00:00:11.855 [I]  636  (): id : 1, size: 0, need ack: 0, is ack: 0 enable_encrypt 1 enable_zip 1
+1970-01-01 00:00:11.865 [I]  703  (): send message need zip
+1970-01-01 00:00:11.884 [W]  344  (): TODO: handle signal engineControlMessage content {"roomId":"CozeRTC_H264_G711A_7451492670649778216","type":"changeCodec","body":{"media":"audio","codec":"PCMA"},"appId":"671221aa298a540183df32d9","messageId":"edc59406f050408cac355aad8b58dd64","sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc"}
+1970-01-01 00:00:11.902 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.909 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.916 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.923 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.930 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.937 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.981 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.981 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.985 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.991 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:11.998 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.005 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.094 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.095 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.098 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.106 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.118 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:12.119 [I]  1213 ():  result 0x0
+1970-01-01 00:00:12.218 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.218 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.223 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.228 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.236 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.243 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.250 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.257 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.329 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.330 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.333 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.340 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.445 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.445 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.449 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.456 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.463 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.470 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.520 [I]  864  (): id : 2, size: 763, need ack: 1, is ack: 0 enable_encrypt 1 enable_zip 1 content_len 1246
+1970-01-01 00:00:12.523 [I]  603  (): {"messageId":"2f8af22508de4459bc731b916f265922","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc"}
+1970-01-01 00:00:12.538 [I]  636  (): id : 2, size: 0, need ack: 0, is ack: 0 enable_encrypt 1 enable_zip 1
+1970-01-01 00:00:12.546 [I]  703  (): send message need zip
+1970-01-01 00:00:12.567 [I]  512  (): MSG-TYPE onAddStream-{"connectionID":"UFJFQ8oYw6hx/I/0BMPTBQAABAE=","appId":"671221aa298a540183df32d9","streamIndex":-1,"sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","screen":false,"elapse":5,"state":1,"privateEnvId":"","clientId":"uid_7451492670649761832","startPushTime":0,"messageId":"2f8af22508de4459bc731b916f265922","video":true,"clientJoinRoomTime":1734944392493,"initStreamId":"EMAhDTvo4QvUZFmGuSrKU3J3e8EzrIHa","attributes":{"videostream":true,"videoCodec":"H264","localvideo":true,"publishTime":1734944393777,"firstFrameSessionId":0,"extaudio":true,"videoDescriptions":[{"maxkbps":6000,"width":240,"framerate":15,"height":240}],"videoCodecFlag":0,"sourceSSRCs":{"audioRtx":450560261,"video":[1178861519],"videoRtx":[140418600],"audio":1855169150},"srcRoomId":"CozeRTC_H264_G711A_7451492670649778216","audiostream":true,"clientRole":"normalUser","localaudio":true,"extvideo":true},"enableNotifyEdgeStream":false,"publish2RoomTime":1734944393777,"streamId":"12951001acfe4bec9e30018c7948cf8e","roomId":"CozeRTC_H264_G711A_7451492670649778216","audio":true,"isLicensePub":false,"remoteSessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","isolationProfile":"no-isolation","nodeId":"10.122.132.14:baa752f6-77e4-4177-b3ca-da145dc06631","isBindToRoom":false,"data":true}xV­ºþþþþþþþþþþþþþþ|s+<8
+1970-01-01 00:00:12.672 [I]  339  (): OnStreamAddEvent from roomid:CozeRTC_H264_G711A_7451492670649778216
+1970-01-01 00:00:12.681 [I]  838  (): put new stream attribute:12951001acfe4bec9e30018c7948cf8e
+1970-01-01 00:00:12.689 [I]  858  (): update new stream: 12951001acfe4bec9e30018c7948cf8e with stream name: uid_74514926706497618321
+1970-01-01 00:00:12.702 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.708 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.715 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.722 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.729 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.737 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.744 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.751 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.758 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.765 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.772 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.784 [I]  864  (): id : 2, size: 805, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 1 content_len 1498
+1970-01-01 00:00:12.792 [I]  496  (): MSG-TYPE {"code":200,"appId":"671221aa298a540183df32d9","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"AwlCxBREdayzqvrC7dInIlCq8iidDfNc","streamId":"12951001acfe4bec9e30018c7948cf8e","eventSessionId":"GHvyHimODRObEOr1fRySMwXxPBsVuItE","relayMessage":{"content":{"streamIndex":0,"audio":false,"video":false,"screen":false,"sharedClientId":"","trackType":0,"message":{"type":"","sequenceId":0}},"attributes":{},"subattributes":{},"sequenceId":1,"peerConnectionId":"UFJFQ8oYw6hx/I/0BMPTBQAABAE=","type":"answer","sdp":"v=0\no=- 0 0 IN IP4 127.0.0.1\ns=parker\nt=0 0\na=group:BUNDLE 0 1\na=msid-semantic: WMS\nm=audio 9 UDP/RTP/AVPF 8\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:UFJFQ8oYw6hx/I/0BMPTBQAABAE=\na=ice-pwd:PoKTmfu7aRVbZrc7po4qo6VS\na=recvonly\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\na=mid:0\na=rtcp-mux\na=rtpmap:8 PCMA/8000\na=rtcp-fb:8 nack\na=rtcp-fb:8 transport-cc\na=rtcp-rsize\nm=video 9 UDP/RTP/AVPF 125 126\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:UFJFQ8oYw6hx/I/0BMPTBQAABAE=\na=ice-pwd:PoKTmfu7aRVbZrc7po4qo6VS\na=recvonly\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\na=mid:1\na=rtcp-mux\na=rtpmap:125 H264/90000\na=rtcp-fb:125 nack\na=rtcp-fb:125 transport-cc\na=fmtp:125 level-asymmýESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1744
+load:0x403c8700,len:0xebc
+load:0x403cb700,len:0x31d4
+entry 0x403c894c
+I (25) boot: ESP-IDF v5.5-dev-972-gfa41fafd27-dirty 2nd stage bootloader
+I (25) boot: compile time Dec 23 2024 16:50:27
+I (25) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.3
+I (34) qio_mode: Enabling default flash chip QIO
+I (38) boot.esp32s3: Boot SPI Speed : 80MHz
+I (42) boot.esp32s3: SPI Mode       : QIO
+I (46) boot.esp32s3: SPI Flash Size : 16MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (56) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (69) boot:  1 phy_init         RF data          01 01 0000d000 00001000
+I (76) boot:  2 factory          factory app      00 00 00010000 00300000
+I (82) boot: End of partition table
+I (86) esp_image: segment 0: paddr=00010020 vaddr=3c180020 size=5be34h (376372) map
+I (149) esp_image: segment 1: paddr=0006be5c vaddr=3fc9b500 size=041bch ( 16828) load
+I (152) esp_image: segment 2: paddr=00070020 vaddr=42000020 size=17d2d0h (1561296) map
+I (385) esp_image: segment 3: paddr=001ed2f8 vaddr=3fc9f6bc size=0492ch ( 18732) load
+I (388) esp_image: segment 4: paddr=001f1c2c vaddr=40378000 size=134e8h ( 79080) load
+I (403) esp_image: segment 5: paddr=0020511c vaddr=600fe000 size=0001ch (    28) load
+I (412) boot: Loaded app from partition at offset 0x10000
+I (413) boot: Disabling RNG early entropy source...
+I (423) octal_psram: vendor id    : 0x0d (AP)
+I (423) octal_psram: dev id       : 0x02 (generation 3)
+I (423) octal_psram: density      : 0x03 (64 Mbit)
+I (428) octal_psram: good-die     : 0x01 (Pass)
+I (433) octal_psram: Latency      : 0x01 (Fixed)
+I (438) octal_psram: VCC          : 0x01 (3V)
+I (443) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (449) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (455) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (461) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (467) octal_psram: DriveStrength: 0x00 (1/1)
+I (473) MSPI Timing: PSRAM timing tuning index: 5
+I (477) esp_psram: Found 8MB PSRAM device
+I (482) esp_psram: Speed: 80MHz
+I (508) mmu_psram: Read only data copied and mapped to SPIRAM
+I (613) mmu_psram: Instructions copied and mapped to SPIRAM
+I (613) cpu_start: Multicore app
+I (832) esp_psram: SPI SRAM memory test OK
+I (841) cpu_start: Pro cpu start user code
+I (841) cpu_start: cpu freq: 240000000 Hz
+I (841) app_init: Application information:
+I (844) app_init: Project name:     tcp_client_example
+I (850) app_init: App version:      v2.7-35-g12b50f37-dirty
+I (856) app_init: Compile time:     Dec 23 2024 16:50:19
+I (862) app_init: ELF file SHA256:  b09558912...
+I (867) app_init: ESP-IDF:          v5.5-dev-972-gfa41fafd27-dirty
+I (874) efuse_init: Min chip rev:     v0.0
+I (879) efuse_init: Max chip rev:     v0.99 
+I (884) efuse_init: Chip rev:         v0.2
+I (889) heap_init: Initializing. RAM available for dynamic allocation:
+I (896) heap_init: At 3FCAFDF0 len 00039920 (230 KiB): RAM
+I (902) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (908) heap_init: At 600FE01C len 00001FCC (7 KiB): RTCRAM
+I (1046) esp_psram: Adding pool of 6272K of PSRAM memory to heap allocator
+I (1046) spi_flash: detected chip: gd
+I (1046) spi_flash: flash io: qio
+W (1051) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`
+I (1059) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (1066) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (1074) main_task: Started on CPU0
+I (1078) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (1087) main_task: Calling app_main()
+I (1094) example_connect: Start example_connect.
+I (1097) pp: pp rom version: e7ae62f
+I (1101) net80211: net80211 rom version: e7ae62f
+I (1107) wifi:wifi driver task: 3fceeaa8, prio:23, stack:6656, core=0
+I (1114) wifi:wifi firmware version: 34d97ea27
+I (1116) wifi:wifi certification version: v7.0
+I (1120) wifi:config NVS flash: enabled
+I (1124) wifi:config nano formatting: disabled
+I (1128) wifi:Init data frame dynamic rx buffer num: 32
+I (1133) wifi:Init static rx mgmt buffer num: 5
+I (1137) wifi:Init management short buffer num: 32
+I (1142) wifi:Init static tx buffer num: 16
+I (1147) wifi:Init tx cache buffer num: 32
+I (1150) wifi:Init static tx FG buffer num: 2
+I (1154) wifi:Init static rx buffer size: 1600
+I (1158) wifi:Init static rx buffer num: 16
+I (1162) wifi:Init dynamic rx buffer num: 32
+I (1166) wifi_init: rx ba win: 16
+I (1170) wifi_init: accept mbox: 6
+I (1174) wifi_init: tcpip mbox: 32
+I (1178) wifi_init: udp mbox: 6
+I (1182) wifi_init: tcp mbox: 6
+I (1186) wifi_init: tcp tx win: 5760
+I (1190) wifi_init: tcp rx win: 5760
+I (1194) wifi_init: tcp mss: 1440
+I (1198) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1204) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10
+I (1270) wifi:mode : sta (74:4d:bd:9d:b6:30)
+I (1271) wifi:enable tsf
+I (1272) example_connect: Connecting to ESP-Audio...
+W (1272) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+I (1281) example_connect: Waiting for IP(s)
+I (3826) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (3827) wifi:state: init -> auth (0xb0)
+I (3829) wifi:state: auth -> assoc (0x0)
+I (3886) wifi:state: assoc -> run (0x10)
+I (3990) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)
+I (3990) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)
+I (3993) wifi:[ADDBA]RX DELBA, reason:39, delete tid:1, initiator:1(originator)
+I (4101) wifi:connected with ESP-Audio, aid = 1, channel 10, BW20, bssid = fc:2f:ef:ab:db:70
+I (4102) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (4104) wifi:pm start, type: 1
+
+I (4107) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (4128) wifi:<ba-add>idx:0 (ifx:0, fc:2f:ef:ab:db:70), tid:0, ssn:4, winSize:64
+I (4187) wifi:AP's beacon interval = 204800 us, DTIM period = 1
+I (5131) esp_netif_handlers: example_netif_sta ip: 192.168.1.101, mask: 255.255.255.0, gw: 192.168.1.1
+I (5131) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.101
+I (6094) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:764d:bdff:fe9d:b630, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+I (6098) example_common: Connected to example_netif_sta
+I (6103) example_common: - IPv4 address: 192.168.1.101,
+I (6109) example_common: - IPv6 address: fe80:0000:0000:0000:764d:bdff:fe9d:b630, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+I (6120) VolcRTCDemo: [ 1 ] Mount sdcard
+I (6125) SDCARD: Using 1-line SD mode,  base path=/sdcard
+I (6131) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6140) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6150) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (6159) AUDIO_THREAD: The esp_periph task allocate stack on internal memory
+I (6173) wifi:<ba-add>idx:1 (ifx:0, fc:2f:ef:ab:db:70), tid:1, ssn:2, winSize:64
+I (6210) SDCARD: CID name SD64G!
+
+W (6667) i2c_bus_v2: I2C master handle is NULL, will create new one
+I (6671) DRV8311: ES8311 in Slave mode
+I (6681) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (6688) ES7210: ES7210 in Slave mode
+I (6697) ES7210: Enable ES7210_INPUT_MIC1
+I (6700) ES7210: Enable ES7210_INPUT_MIC2
+I (6703) ES7210: Enable ES7210_INPUT_MIC3
+W (6706) ES7210: Enable TDM mode. ES7210_SDP_INTERFACE2_REG12: 2
+I (6711) ES7210: config fmt 60
+I (6713) AUDIO_HAL: Codec mode is 3, Ctrl:1
+I (6721) VolcRTCDemo: [2.1] audio_board & audio_board_key init
+I (6722) VolcRTCDemo: Starting again!
+
+I (6730) AUDIO_THREAD: The button_task task allocate stack on external memory
+I (6827) main_task: Returned from app_main()
+I (10126) AUDIO_PIPELINE: [3.0] Create audio pipeline for recording
+I (10126) AUDIO_PIPELINE: [3.2] Create i2s stream to read audio data from codec chip
+I (10131) AUDIO_PIPELINE: [3.3] Create audio encoder to handle data
+I (10137) AUDIO_PIPELINE: [3.4] Register all elements to audio pipeline
+I (10144) AUDIO_PIPELINE: [3.1] Create algorithm stream for aec
+I (10151) AUDIO_PIPELINE: [3.5] Link it together [codec_chip]-->i2s_stream-->audio_encoder-->raw
+I (10160) AUDIO_PIPELINE: link el->rb, el:0x3c200f5c, tag:i2s, rb:0x3c2045bc
+I (10168) AUDIO_PIPELINE: link el->rb, el:0x3c203f28, tag:algo, rb:0x3c206724
+I (10176) AUDIO_PIPELINE: link el->rb, el:0x3c203d6c, tag:g711a, rb:0x3c20689c
+I (10184) AUDIO_PIPELINE: [ 2 ] Start codec chip
+I (10190) AUDIO_PIPELINE: [3.0] Create audio pipeline for playback
+I (10196) AUDIO_PIPELINE: [3.2] Create i2s stream to write data to codec chip
+I (10205) AUDIO_PIPELINE: [3.4] Register all elements to audio pipeline
+I (10211) AUDIO_PIPELINE: [3.5] Link it together raw-->audio_decoder-->i2s_stream-->[codec_chip]
+I (10221) AUDIO_PIPELINE: link el->rb, el:0x3c207678, tag:raw, rb:0x3c207f60
+I (10228) AUDIO_PIPELINE: link el->rb, el:0x3c207d80, tag:dec, rb:0x3c20a0c8
+W (10236) AUDIO_BOARD: The board has already been initialized!
+I (10243) AUDIO_PIPELINE: Func:audio_pipeline_run, Line:359, MEM Total:6264540 Bytes, Inter:70995 Bytes, Dram:70995 Bytes, Dram largest free:31716Bytes
+
+W (10257) AUDIO_ELEMENT: [i2s] AEL_MSG_CMD_RESUME,state:1
+W (10263) AUDIO_ELEMENT: [algo] AEL_MSG_CMD_RESUME,state:1
+W (10269) AUDIO_ELEMENT: [g711a] AEL_MSG_CMD_RESUME,state:1
+I (10275) AUDIO_PIPELINE: Pipeline started
+I (10280) AUDIO_PIPELINE: Func:audio_pipeline_run, Line:359, MEM Total:6080852 Bytes, Inter:40567 Bytes, Dram:40567 Bytes, Dram largest free:31716Bytes
+
+W (10295) AUDIO_ELEMENT: [dec] AEL_MSG_CMD_RESUME,state:1
+W (10301) AUDIO_ELEMENT: [i2s] AEL_MSG_CMD_RESUME,state:1
+I (10307) AUDIO_PIPELINE: Pipeline started
+1970-01-01 00:00:09.472 [I]  339  (): config : configParams.debug.log_to_console from 0 to 1
+1970-01-01 00:00:09.479 [I]    VolcEngineRTCLite.c:105  byte_rtc_init(): ****************** HELLO BOOKA (671221aa298a540183df32d9)(1.56.001.58)(81d807dbfc01a9fd5954559c8ee6f8a5d76b0b92) ********************
+1970-01-01 00:00:09.497 [I]    VolcEngineRTCLite.c:110  byte_rtc_init(): Platform 
+1970-01-01 00:00:09.504 [I]    VolcEngineRTCLite.c:113  byte_rtc_init(): OsVersion 
+1970-01-01 00:00:09.511 [I]    VolcEngineRTCLite.c:116  byte_rtc_init(): CompilerInfo GCC/13.2.0
+1970-01-01 00:00:09.520 [I]         GlobalParams.c:145  globalPrintParams(): pGlobalParams->configParams.debug.log_to_console from 0 to 1
+1970-01-01 00:00:09.532 [I]         GlobalParams.c:147  globalPrintParams(): pGlobalParams->configParams.rtc.root_path  to .
+1970-01-01 00:00:09.543 [I]  123  (): task threadNum 0
+1970-01-01 00:00:09.548 [I]  63   (): liteInterrupterCreate fd 55 interrupter fd 55 fd 56
+1970-01-01 00:00:09.556 [E]  270  (): operation returned status code: 0x00000009
+1970-01-01 00:00:09.565 [I]  56   (): createKcpSession timerId 1
+1970-01-01 00:00:09.570 [I]  56   (): rx_ev_loop_timer_repeat_task_callback timerId 2
+1970-01-01 00:00:09.577 [I]  56   (): connectionServiceCreate timerId 3
+1970-01-01 00:00:09.583 [I]  598  (): engineImplXStart 
+1970-01-01 00:00:09.587 [I]        AccessService.c:196  __accessSeviceLoadNodesFromCache(): load access nodes from cache. nodes 0 status 34
+1970-01-01 00:00:09.599 [I]  189  ():  PConnectionService :  S_CON_PREPARE --> S_CON_PREPARE, Retry 1/0 Wait 511 Ms
+1970-01-01 00:00:09.610 [I]  189  ():  Access :  S_ACCESS_INIT --> S_ACCESS_INIT, Retry 1/0 Wait 4 Ms
+1970-01-01 00:00:09.619 [I]  56   (): liteHttpCreate timerId 4
+1970-01-01 00:00:09.625 [I]  137  (): trying access domain access.rtc.volcvideo.com
+1970-01-01 00:00:09.632 [I]  189  ():  LiteHttp :  S_IDLE --> S_IDLE, Retry 1/0 Wait 16 Ms
+1970-01-01 00:00:09.639 [I]  1836 (): __S_IDLE_Execute 1
+1970-01-01 00:00:09.644 [I]  1839 (): __S_IDLE_Execute
+1970-01-01 00:00:09.649 [I]  189  ():  LiteHttp :  S_IDLE --> S_INIT, Retry 0/0 Wait 1008299332 Ms
+1970-01-01 00:00:09.658 [I]  189  ():  PConnectionService :  S_CON_PREPARE --> S_CON_INIT, Retry 0/0 Wait 1070398384 Ms
+1970-01-01 00:00:09.669 [I]  73   (): thread (VolcRTCMain)(1009215428) started
+1970-01-01 00:00:09.669 [I]  28   (): thread(VolcRTCMain)(43947) start ....
+1970-01-01 00:00:09.675 [I]  105  (): detach thread (VolcRTCMain)(1009215428)
+1970-01-01 00:00:09.684 [I]  1570 (): __S_INIT_Execute
+1970-01-01 00:00:09.689 [I]  56   (): rtsV4Start timerId 5
+1970-01-01 00:00:09.694 [I]  1402 (): resolving host:access.rtc.volcvideo.com
+1970-01-01 00:00:09.903 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 1/0 Wait 1009249760 Ms
+1970-01-01 00:00:09.904 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 2/0 Wait 1009249760 Ms
+1970-01-01 00:00:09.912 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:09.919 [I]  1026 (): ID 637574843 resolve host access.rtc.volcvideo.com ip is 139.227.230.75
+1970-01-01 00:00:09.929 [I]  189  ():  LiteHttp :  S_INIT --> S_RESOLVED, Retry 0/0 Wait 1009250540 Ms
+1970-01-01 00:00:09.938 [I]  1431 (): connecting to 139.227.230.75
+1970-01-01 00:00:09.944 [I]  154  (): liteSocketCreate fd 57 socket type 1
+1970-01-01 00:00:09.976 [I]  189  ():  LiteHttp :  S_RESOLVED --> S_CONNECTED, Retry 0/0 Wait 1 Ms
+1970-01-01 00:00:10.235 [I]  189  ():  LiteHttp :  S_CONNECTED --> S_HANDSHARDKED, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:10.236 [I]  189  ():  LiteHttp :  S_HANDSHARDKED --> S_REQ_SENT, Retry 0/0 Wait 5 Ms
+1970-01-01 00:00:10.628 [I]  69   (): kActionAccess time used 969 ms
+1970-01-01 00:00:10.628 [I]  213  (): access node size:3
+1970-01-01 00:00:10.628 [I]  218  (): Node 101.133.204.195:80
+1970-01-01 00:00:10.634 [I]  218  (): Node 101.133.204.195:443
+1970-01-01 00:00:10.639 [I]  218  (): Node 122.195.130.69:80
+1970-01-01 00:00:10.648 [E]  309  (): operation returned status code: 0x00000009
+1970-01-01 00:00:10.651 [I]        AccessService.c:103  __accessServiceUpdateNodesInCache(): Succes to save access nodes(size = 3) to cache file
+1970-01-01 00:00:10.664 [I]  189  ():  PConnectionService :  S_CON_INIT --> S_CON_CONNECTING, Retry 0/0 Wait 1008287308 Ms
+1970-01-01 00:00:10.675 [I]  377  (): Update node, current index -1
+1970-01-01 00:00:10.681 [I]    ConnectionService.c:304  startConnectWithNode(): iceRemoteCandidate: candidate:1832034026 1 udp 2122260223 101.133.204.195 80 typ host generation 0 ufrag tn50 network-id 1 network-cost 10 from ACCESS
+1970-01-01 00:00:10.701 [I]  1179 (): 
+1970-01-01 00:00:10.704 [I]  424  (): before del timer 1
+1970-01-01 00:00:10.709 [I]  426  (): end del timer 1
+1970-01-01 00:00:10.717 [I]  56   (): createKcpSession timerId 6
+1970-01-01 00:00:10.721 [I]  100  (): ............. Get Ip v4 address 192.168.1.101:0
+1970-01-01 00:00:10.728 [I]  154  (): liteSocketCreate fd 58 socket type 2
+1970-01-01 00:00:10.735 [I]  154  (): liteSocketCreate fd 59 socket type 2
+1970-01-01 00:00:10.741 [E]  177  (): operation returned status code: 0x00000001
+1970-01-01 00:00:10.748 [I]  56   (): iceAgentStartGathering timerId 7
+1970-01-01 00:00:10.755 [I]  668  (): iceAgentStart: UFJFQ8Z2q1/h3WRh3NhdBgAABAE=:u9CSbc45Wp3icziP9NLeYI4SkK1ISLR11G1Hq0rnO24f+Fjd9bhZ/oJ2hdvXiwKzJ/9x3k0Y8FIVVBGYMZuNbGRoEOh60dNFZwUM68k2fjThFrZAckihYNxIcYnFHguJRhpOksKyqReqNbVMN+kDupGQ
+1970-01-01 00:00:10.775 [I]  56   (): iceAgentStart timerId 8
+1970-01-01 00:00:10.781 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 3/0 Wait 0 Ms
+1970-01-01 00:00:10.789 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:10.798 [I]  189  ():  Access :  S_ACCESS_INIT --> S_ACCESS_SUCCESS, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:10.805 [E]  641  (): ID 637574843  E_LOGIC : NO need keepAlive
+1970-01-01 00:00:10.812 [I]  189  ():  LiteHttp :  S_REQ_SENT --> S_COMPELETED, Retry 0/0 Wait 641 Ms
+1970-01-01 00:00:10.821 [I]  1512 (): ID 637574843 called
+1970-01-01 00:00:10.826 [I]  424  (): before del timer 4
+1970-01-01 00:00:10.831 [I]  426  (): end del timer 4
+1970-01-01 00:00:10.836 [I]  89   (): unRegister fd 57 type 0
+1970-01-01 00:00:10.842 [I]  1870 (): ID 637574843 https://access.rtc.volcvideo.com/dispatch/v1/AccessInfo?Action=GetAccessInfo Host:access.rtc.volcvideo.com(139.227.230.75) POST 200(OK) 4845/-1/-1 RT 244 CT 38 HT 258 TT 377 E_LOGIC (NO need keepAlive)
+1970-01-01 00:00:10.865 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_NEW --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 0/0 Wait 1008278028 Ms
+1970-01-01 00:00:10.878 [I]  1213 ():  result 0x0
+1970-01-01 00:00:10.880 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_CHECK_CONNECTION
+1970-01-01 00:00:10.889 [I]  210  (): ice connection state changed to RTC_PEER_CONNECTION_STATE_CONNECTING
+1970-01-01 00:00:10.898 [I]  624  (): 
+1970-01-01 00:00:10.902 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTING, Retry 1/0 Wait 1 Ms
+1970-01-01 00:00:10.912 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 4/0 Wait 4 Ms
+1970-01-01 00:00:10.921 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:10.930 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:10.980 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:11.034 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CHECK_CONNECTION, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:11.081 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:11.083 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:11.089 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CHECK_CONNECTION --> ICE_AGENT_STATE_CONNECTED, Retry 0/0 Wait 1008278028 Ms
+1970-01-01 00:00:11.093 [I]  56   (): iceAgentConnectedStateSetup timerId 9
+1970-01-01 00:00:11.100 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_CONNECTED
+1970-01-01 00:00:11.108 [I]  210  (): ice connection state changed to RTC_PEER_CONNECTION_STATE_CONNECTED
+1970-01-01 00:00:11.117 [I]  69   (): kActionIce time used 396 ms
+1970-01-01 00:00:11.123 [I]  138  (): serialize success size 36
+1970-01-01 00:00:11.128 [I]  159  (): id: 0, type: ["CheckConnectivity",;
+content: {"needStrictCheck":false,"ts":11123}
+1970-01-01 00:00:11.139 [I]  636  (): id : 0, size: 0, need ack: 36, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:11.149 [I]  624  (): 
+1970-01-01 00:00:11.152 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTING, Retry 2/0 Wait 1070220968 Ms
+1970-01-01 00:00:11.163 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_WAIT, Retry 5/0 Wait 4 Ms
+1970-01-01 00:00:11.172 [E]  167  (): operation returned status code: 0x52000057
+1970-01-01 00:00:11.213 [I]  864  (): id : 0, size: 25, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 0 content_len 12
+1970-01-01 00:00:11.214 [I]  496  (): MSG-TYPE {"code":200}xV­º
+1970-01-01 00:00:11.219 [I]  416  (): code == 200
+1970-01-01 00:00:11.224 [I]  624  (): 
+1970-01-01 00:00:11.227 [I]  189  ():  PConnectionService :  S_CON_CONNECTING --> S_CON_CONNECTED, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:11.238 [I]  189  ():  RoomImplX :  S_ROOM_WAIT --> S_ROOM_JOIN_INIT, Retry 0/0 Wait 4 Ms
+1970-01-01 00:00:11.249 [I]  138  (): serialize success size 1063
+1970-01-01 00:00:11.253 [I]  159  (): id: 1, type: ["joinRoom",;
+content: {"Authorization":"Bearer 001671221aa298a540183df32d9bQCJ0gsBhCJpZwR0amcmAENvemVSVENfSDI2NF9HNzExQV83NDUxNDkyNjcwNjQ5Nzc4MjE2FwB1aWRfNzQ1MTQ5MjY3MDY0OTc2MTgzMgUAAAAAAAAAAQAAAAAAAgAAAAAAAwAAAAAABAAAAAAAIAB6pwnoMqa0wboA7JNKY7NFg0e0JzlTiujWtbGxGyDi1A==","elapse":0,"options":{"enableAutoSubscribe":true,"enableBigRoomMode":false,"enableP2P":false,"enableSceneConfigV2":false,"enableUnBundleMode":false,"subFallbackOption":0,"supportTokenExpireCallBack":true,"supportCheckTokenPrivilege":true,"isLicense":false},"params":{"appId":"671221aa298a540183df32d9","deviceId":"c9338eab187532be0900000000000000","deviceType":"linux","memorySize":0,"roomId":"CozeRTC_H264_G711A_7451492670649778216","sdkVersion":"3.56.001.58","rtsVersion":0,"supportedAudioCodecs":["PCMA"],"supportedCodecs":["H264"],"userId":"uid_7451492670649761832"},"roomId":"CozeRTC_H264_G711A_7451492670649778216","sdpInfo":{"mode":0},"sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","timestamp":11247,"userAttributes":{"enableaudio":true,"enablevideo":true,"recvMode":0,"sendMode":0,"supportStreamFlags":0}}
+1970-01-01 00:00:11.352 [I]  636  (): id : 1, size: 0, need ack: 1063, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:11.363 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_CONNECTED --> ICE_AGENT_STATE_NOMINATING, Retry 0/0 Wait 1008278028 Ms
+1970-01-01 00:00:11.375 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_NOMINATING
+1970-01-01 00:00:11.384 [I]  1213 ():  result 0x0
+1970-01-01 00:00:11.407 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:11.433 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_NOMINATING --> ICE_AGENT_STATE_READY, Retry 0/0 Wait 1070252872 Ms
+1970-01-01 00:00:11.434 [I]  235  (): onIceConnectionStateChange, ICE_AGENT_STATE_READY
+1970-01-01 00:00:11.601 [I]  864  (): id : 1, size: 3138, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 1 content_len 6492
+1970-01-01 00:00:11.612 [I]  496  (): MSG-TYPE {"config":{"_abtest_vid":"","engine_BAC":{"adm":{},"codec":{}},"engine_PerfController":{},"autoSub":false,"decodeH264V1":-1,"engine_video_capture":{},"sami_config":{"basic_app_key":"rtc_longterm_from_sami","basic_token":"ZPsDVKFwJ65xgxCdmq5fAInMfIditXQYeQnEbFEbG+3fL0hmMuw2+DjLacf7ecvj1ZoBjAOTKOerI3kOgRVurQrhqg9cNy6TI28XkdLwmhnNS0dEeNCq2i+i4Dj32ad4DkQJbI6LhcTdS2R/DI3MuoP01Nc3SF55hkQajojxuWrk8oPSTGLi/AW/A8Q0hHSslfqqgFNSFCO3g36FvqaSJQEpEUNZdp2/u2NHy8ffZeaDNPa/ld2JG49hJIiZbKGKKmoKawQDH9OW6WKkHL/82LoXLxtrIjoso7qrEVWS9E2pHDv7G750CadZRjWaHOY2tuJtT/3IgOpgnILjghzVYw=="},"client_network":{"jitter_buffer":{"public_params":{"audio":{"delay_mode":"extreme_low_delay","target_delay_ms_max":300,"target_delay_ms_min":60},"sync":{"audio_video":{"sync_policy":"close"}},"video":{"delay_mode":"extreme_low_delay","target_delay_ms_max":50,"target_delay_ms_min":15}}}},"engine_logStrip":{},"rateFeedbackConfig":{"engine_feedback":"https://rtc-log-report.bytedance.com/salvage/feedback/report"},"deviceScore":-1,"engine_video_src_analysis":{},"hardware_ear_monitor_in_openlist":false,"tcc":true,"effectApplyFormat":{"format":"rgba"},"enableFlowControl":false,"engine_APM_48k_pipelines":{},"engine_APM_aec_type_switch":{"aec_type_switch_enable":false},"networkThreadPriority":2,"subChannel_volume":{"volume_scale":0,"channel_switch_delay":3,"volume_Indicate_Interval":1},"support_client_mix":0,"edgeAggregation":{"AggConfig":{"dimension":"province"},"AggType":"AggByMaxValServerAndRoom","enable":false},"enableWebPubRemb":true,"engine_APM_howl_detect":{},"effectProcMode":{"procMode":"single-proc"},"engine_Performance":{},"videoCaptureEnableCamera2":true,"videoCaptureEnableVECamera":false,"_device_policy_id":"","engine_APM_dump_api_global_switch":{},"engine_videocodec":{"enc_cfg":{},"h264":{"bytevc0":{},"enable_h264_sw_hp":false,"enable_x264":false,"hw_dec":{},"hw_enc":{"enable":true,"enable_hp":true},"hw_enc_on_scc":false},"specl_cfg":{"dec_slow_send_strategy":{"max_allowed_cache_frames":0},"enc_adaptiveref":{},"enc_lowlatency":{"enable_lowlatency_rc":false},"enc_qp_statis":{"enable_bytevc1_qp":true}},"svc":{},"bytevc1":{"hw_dec":{},"hw_enc":{"enable":true},"sw_enc":{},"sw_enc_scc":{}},"bytevc1scc":{},"hw_decode_min_dimension":64,"hw_decode_smooth_output":false,"hw_encode_min_dimension":360,"qsv":{},"temporal_layer_num":1},"srtp":false,"targetAudioCodec":"PCMA","byteLogLevel":{"byte_log_level":"warning","enable_websocket":true,"sdk_level":"warning","stats_freq":2000},"network_quality_calculation":{},"rtc_ktv_biz_url":{"ktv_biz_url":"https://common.rtc.volcvideo.com"},"workThreadPriority":{"workThreadPriority":2},"deadLockedAssert":{"deadLockTimes":10,"enableDeadLockAssert":false},"engine_ICE":{},"engine_firstFrame":{},"targetScreenCodec":"H264","multiChatMode":false,"engine_ADM_enhancement":{},"fakeVideo":true,"kcp":{},"engine_ADM":{"audio_layer":5,"play":{"chn":1,"sr":48000},"record":{"chn":1,"sr":48000}},"engine_Log":{},"engine_VPM":{"key_frame_control":{},"p2p_enable_framerate_control":{},"roi":{},"simPerf":{},"ondemand":{"default":3,"enable":false},"perf_manager":{},"rc":{},"screen_resolution_fps_table":{},"video_send_grade_config":{},"autoSim":{},"psnr":{},"screen_psnr":{},"screen_similarity":{},"video_send_dynamic_codec_params":{},"simfallback":{},"SubDynamicPerf":{},"hash_check":{"frequency":15},"low_bitrate_adapt":{},"no_scaling":{},"pre_a":{"EncUsageHigh":150,"EncUsageLow":44}},"fec":"BDRSFEC","performance_table":{},"rtx":true,"targetCodec":"H264","encodeH264V1":-1,"engine_APM_quality_score":{"enable":false},"engine_VNM":{"pacer":{"enable_pacer":false,"pacer_delay":500,"pacer_times":4.5},"retrans":{"response":{"disable_rtx_rtt":1000,"resend_max_times":12,"rtx_first_rtt":50}},"strategy":{"enable_air_play_up_policy":false,"retran_mode_in_air_play":1},"use_old_configure":false,"bwest":{"gcc":{"overuse_thresh_time":10,"tcc_min_bwe":0,"enable_delaybwe":true,"enable_lossbwe":true,"high_loss":10,"low_loss":2,"overuse_thresh_high":600,"overuse_thresh_low":6},"netest":{"enable_losskeep":false,"enable_netest":true,"loss_std_big":300,"loss_std_small":200,"loss_video_maxbr":200},"sendside_bwe_min":30000},"fec":{"split_rtt":500,"more_fec_burst":5,"more_fec_loss":50,"more_fec_rtt":300,"split_loss":100,"max_fec_num":4,"max_fec_rtt":500,"split_len":500,"video_matrix_max_num":6},"jitterbuffer":{"video_jb_mode":2,"avsync":{"video":{"enable_close_av_sync":true}},"low_delay":{"enable_low_delay_jitter_mode":true,"limit_extrapolate_localtime_ms":30,"max_jitter_by_frame_bps_var_ms":20},"min_target_delay":15,"smooth_render":{"max_smooth_delay":50}}},"engine_videoprocess":{"sr_psnr":{},"up_scale":{},"video_denoise":{},"video_high_dynamic_range":{},"video_min_target_framerate":{},"video_mos":{}},"p2pSwitchConfig":{"EnableNATProbe":false,"NormalNetworkQualityLevel":3,"P2PEnableSmoothSwitch":true,"P2PMinRttThreshold":10,"NATProbeTimeout":5000,"P2PMaxRttThreshold":100,"SFU2P2PProbeNetworkPeriod":5000,"P2P2SFUWeakNetworkProbeInterval":900,"P2PEnableCellularIpv6":false,"P2PEnableIpv6":false,"SFU2P2PSwitchWeakThreshold":0.3,"SFURttRelay":20,"SwitchSFUByNetworkQuality":true,"P2P2SFUNetworkProbePeriod":10000,"P2P2SFUNormalNetworkProbeInterval":2500,"P2PMaxRestartTimes":50,"SFU2P2PProbeNetworkInterval":48,"SFULost":0.0009,"SwitchP2PByNetworkQuality":true},"engine_ANM":{"codec":{"enc_param":{"chn":2,"sr":48000,"bitrate":64000},"mode":1,"use_dtx":false},"fec":{"audio_fec_max_times":0,"audio_matrix_max_num":5}},"join_room_request_sdp_profile":1,"transcodeCustomCodecParams":{}},"supportVideoCodecFlag":257,"supportScreenCodecFlag":769,"roomId":"CozeRTC_H264_G711A_7451492670649778216","clientId":"uid_7451492670649761832","vendorConfig":{"enableMultiVendor":false,"vendorCode":0},"relayMessage":null,"clients":["uid_7451492670649761832"],"roomAttributes":{"userNotifyDisabled":false,"multiChatMode":false,"bigRoomMode":false},"clientIp":"140.207.168.138","callId":"2496f748026e48bc86b0c1d835169547_1734944392523014928","pingList":null,"isLicense":false,"sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","attributes":{},"streams":[],"msIP":null,"abResult":{"otherConfig":{}},"eventSessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","appId":"671221aa298a540183df32d9","code":200,"clientsDetail":[{"clientId":"uid_7451492670649761832","attributes":{"enablevideo":true,"recvMode":0,"sendMode":0,"supportAudioCodecFlag":0,"supportScreenCodecFlag":769,"supportStreamFlags":0,"supportVideoCodecFlag":257,"enableaudio":true},"clientJoinTime":11247,"screenStreamEncode":0}]}xV­ºþþþþþþþþþþþþþþþþ4Â(<8
+1970-01-01 00:00:12.172 [I]  173  (): code == 200
+1970-01-01 00:00:12.176 [I]  69   (): kActionJoinRoom time used 929 ms
+1970-01-01 00:00:12.182 [I]  1047 (): use id: uid_7451492670649761832
+1970-01-01 00:00:12.188 [I]  733  (): CozeRTC_H264_G711A_7451492670649778216:uid_7451492670649761832 join room success! 
+1970-01-01 00:00:12.201 [I]  771  (): [network lite] net connection add video send stream , stream id = 1, media ssrc = 2090087488, remote ssrc = 0
+1970-01-01 00:00:12.213 [I]  739  (): [network lite] net connection add audio send stream , stream id = 2, media ssrc = 599195077, remote ssrc = 0
+1970-01-01 00:00:12.230 [I]  189  ():  StreamPublisher :  S_STREAM_PUBLISH_WAIT --> S_STREAM_PUBLISH_WAIT, Retry 1/0 Wait 1009365612 Ms
+1970-01-01 00:00:12.237 [I]  189  ():  StreamPublisher :  S_STREAM_PUBLISH_WAIT --> S_STREAM_PUBLISH_INIT, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:12.251 [I]  138  (): serialize success size 3134
+1970-01-01 00:00:12.254 [I]  159  (): id: 2, type: ["publish",;
+content: {"attributes":{"audiostream":true,"extaudio":true,"extvideo":true,"firstFrameSessionId":0,"localaudio":true,"localvideo":true,"sourceSSRCs":{"audio":599195077,"audioRtx":1643896863,"video":[2090087488],"videoRtx":[173017711]},"videoDescriptions":[{"framerate":15,"height":240,"maxkbps":6000,"width":240}],"videostream":true},"audio":true,"data":true,"elapse":0,"eventSessionId":"UpBnVm2KGZxkZqDRWRbYatuhyab56B1f","initStreamId":"MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3","peerConnectionId":"Xd4PoKWwUlPd9ZwfQgpeN3WiStdYMx5R","roomId":"CozeRTC_H264_G711A_7451492670649778216","sdpInfo":{"mode":1,"msid":"MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3","sdp":"v=0\r\no=- 684182000 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0 1\r\na=msid-semantic: WMS MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3\r\nm=audio 9 UDP/RTP/AVPF 8 8\r\nc=IN IP4 127.0.0.1\r\na=candidate\r\na=msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 qEN17AcZnrvssoQW4br8qf3sKZw4iFWpfD4H8NLBq241OJFOyDW7KzxagdVljIn\r\na=ssrc-group:FID 599195077 1643896863\r\na=ssrc:599195077 cname:\r\na=ssrc:599195077 msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 qEN17AcZnrvssoQW4br8qf3sKZw4iFWpfD4H8NLBq241OJFOyDW7KzxagdVljIn\r\na=ssrc:599195077 mslabel:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3\r\na=ssrc:599195077 label:qEN17AcZnrvssoQW4br8qf3sKZw4iFWpfD4H8NLBq241OJFOyDW7KzxagdVljIn\r\na=ssrc:1643896863 cname:\r\na=ssrc:1643896863 msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 qEN17AcZnrvssoQW4br8qf3sKZw4iFWpfD4H8NLBq241OJFOyDW7KzxagdVljIn\r\na=ssrc:1643896863 mslabel:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3\r\na=ssrc:1643896863 label:qEN17AcZnrvssoQW4br8qf3sKZw4iFWpfD4H8NLBq241OJFOyDW7KzxagdVljIn\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=mid:0\r\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=sendonly\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:8 PCMA/8000\r\na=rtcp-fb:8 nack\r\na=rtcp-fb:8 transport-cc\r\nm=video 9 UDP/RTP/AVPF 125 126\r\nc=IN IP4 127.0.0.1\r\na=candidate\r\na=msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 V536PRYEoO8e45V8MTPmpctsF8HqkklyN3MEYVeLqina22wJh6BRMxlET2kt8QF\r\na=ssrc-group:FID 2090087488 173017711\r\na=ssrc:2090087488 cname:\r\na=ssrc:2090087488 msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 V536PRYEoO8e45V8MTPmpctsF8HqkklyN3MEYVeLqina22wJh6BRMxlET2kt8QF\r\na=ssrc:2090087488 mslabel:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3\r\na=ssrc:2090087488 label:V536PRYEoO8e45V8MTPmpctsF8HqkklyN3MEYVeLqina22wJh6BRMxlET2kt8QF\r\na=ssrc:173017711 cname:\r\na=ssrc:173017711 msid:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3 V536PRYEoO8e45V8MTPmpctsF8HqkklyN3MEYVeLqina22wJh6BRMxlET2kt8QF\r\na=ssrc:173017711 mslabel:MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3\r\na=ssrc:173017711 label:V536PRYEoO8e45V8MTPmpctsF8HqkklyN3MEYVeLqina22wJh6BRMxlET2kt8QF\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=mid:1\r\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=sendonly\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:125 H264/90000\r\na=fmtp:125 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\r\na=rtpmap:126 rtx/90000\r\na=fmtp:126 apt=125\r\na=rtcp-fb:125 nack\r\na=rtcp-fb:125 transport-cc\r\n","type":"offer"},"sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","state":"relay","video":true}
+1970-01-01 00:00:12.532 [I]  636  (): id : 2, size: 0, need ack: 3134, is ack: 1 enable_encrypt 0 enable_zip 0
+1970-01-01 00:00:12.543 [I]  189  ():  RoomImplX :  S_ROOM_JOIN_INIT --> S_ROOM_JOINED, Retry 0/0 Wait 1009416820 Ms
+1970-01-01 00:00:12.565 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:12.568 [I]  864  (): id : 1, size: 243, need ack: 1, is ack: 0 enable_encrypt 1 enable_zip 1 content_len 241
+1970-01-01 00:00:12.577 [I]  603  (): {"messageId":"9786d0709d4a41c3bca25f38ba705d27","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta"}
+1970-01-01 00:00:12.592 [I]  636  (): id : 1, size: 0, need ack: 0, is ack: 0 enable_encrypt 1 enable_zip 1
+1970-01-01 00:00:12.602 [I]  703  (): send message need zip
+1970-01-01 00:00:12.621 [W]  344  (): TODO: handle signal engineControlMessage content {"body":{"media":"audio","codec":"PCMA"},"appId":"671221aa298a540183df32d9","messageId":"9786d0709d4a41c3bca25f38ba705d27","sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","roomId":"CozeRTC_H264_G711A_7451492670649778216","type":"changeCodec"}
+1970-01-01 00:00:12.639 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.646 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.654 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.667 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.668 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.676 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.685 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.689 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.696 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.774 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.784 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.786 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.797 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.801 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.803 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.889 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.900 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.902 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.913 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:12.936 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:12.966 [I]  1213 ():  result 0x0
+1970-01-01 00:00:12.999 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.001 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.012 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.021 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.025 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.036 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.040 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.042 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.123 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.133 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.136 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.147 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.235 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.237 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.247 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.256 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.259 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.268 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.313 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.316 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.326 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.336 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.338 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.346 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.433 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.437 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.446 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.456 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.459 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.548 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.552 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.556 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.565 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.567 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:13.579 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.587 [E]  964  (): operation returned status code: 0x70000503
+1970-01-01 00:00:13.602 [I]  864  (): id : 2, size: 823, need ack: 0, is ack: 1 enable_encrypt 1 enable_zip 1 content_len 1498
+1970-01-01 00:00:13.604 [I]  496  (): MSG-TYPE {"code":200,"appId":"671221aa298a540183df32d9","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","streamId":"2740d9adf3fa498f93785c2cca04875a","eventSessionId":"UpBnVm2KGZxkZqDRWRbYatuhyab56B1f","relayMessage":{"sdp":"v=0\no=- 0 0 IN IP4 127.0.0.1\ns=parker\nt=0 0\na=group:BUNDLE 0 1\na=msid-semantic: WMS\nm=audio 9 UDP/RTP/AVPF 8\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:UFJFQ8Z2q1/h3WRh3NhdBgAABAE=\na=ice-pwd:+rRCLOKVj0dVZJC6mQf3/t3s\na=recvonly\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\na=mid:0\na=rtcp-mux\na=rtpmap:8 PCMA/8000\na=rtcp-fb:8 nack\na=rtcp-fb:8 transport-cc\na=rtcp-rsize\nm=video 9 UDP/RTP/AVPF 125 126\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:UFJFQ8Z2q1/h3WRh3NhdBgAABAE=\na=ice-pwd:+rRCLOKVj0dVZJC6mQf3/t3s\na=recvonly\na=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\na=mid:1\na=rtcp-mux\na=rtpmap:125 H264/90000\na=rtcp-fb:125 nack\na=rtcp-fb:125 transport-cc\na=fmtp:125 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\na=rtpmap:126 rtx/90000\na=fmtp:126 apt=125\na=rtcp-rsize\n","content":{"streamIndex":0,"audio":false,"video":false,"screen":false,"sharedClientId":"","trackType":0,"message":{"type":"","sequenceId":0}},"attributes":{},"subattributes":{},"sequenceId":1,"peerConnectionId":"UFJFQ8Z2q1/h3WRh3NhdBgAABAE=","type":"answer"},"initStreamId":"MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3"}xV­ºþþþþþþþþþþþþþþþþþþÌk+<
+1970-01-01 00:00:13.739 [I]  225  (): code is 200
+1970-01-01 00:00:13.743 [I]  69   (): kActionPublish time used 1543 ms
+1970-01-01 00:00:13.750 [I]  189  ():  StreamPublisher :  S_STREAM_PUBLISH_INIT --> S_STREAM_PUBLISHED, Retry 0/0 Wait 0 Ms
+1970-01-01 00:00:13.763 [I]  282  (): set remote description:
+v=0
+o=- 0 0 IN IP4 127.0.0.1
+s=parker
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic: WMS
+m=audio 9 UDP/RTP/AVPF 8
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=recvonly
+a=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=mid:0
+a=rtcp-mux
+a=rtpmap:8 PCMA/8000
+a=rtcp-fb:8 nack
+a=rtcp-fb:8 transport-cc
+a=rtcp-rsize
+m=video 9 UDP/RTP/AVPF 125 126
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=recvonly
+a=extmap:5 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=mid:1
+a=rtcp-mux
+a=rtpmap:125 H264/90000
+a=rtcp-fb:125 nack
+a=rtcp-fb:125 transport-cc
+a=fmtp:125 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f
+a=rtpmap:126 rtx/90000
+a=fmtp:126 apt=125
+a=rtcp-rsize
+
+1970-01-01 00:00:13.849 [I]  864  (): id : 2, size: 751, need ack: 1, is ack: 0 enable_encrypt 1 enable_zip 1 content_len 1246
+1970-01-01 00:00:13.852 [I]  603  (): {"messageId":"ef1eb6fc9781493c972aa53310e5bbe1","roomId":"CozeRTC_H264_G711A_7451492670649778216","sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta"}
+1970-01-01 00:00:13.866 [I]  636  (): id : 2, size: 0, need ack: 0, is ack: 0 enable_encrypt 1 enable_zip 1
+1970-01-01 00:00:13.875 [I]  703  (): send message need zip
+1970-01-01 00:00:13.899 [I]  512  (): MSG-TYPE onAddStream-{"streamId":"2740d9adf3fa498f93785c2cca04875a","connectionID":"UFJFQ8Z2q1/h3WRh3NhdBgAABAE=","streamIndex":-1,"clientId":"uid_7451492670649761832","video":true,"remoteSessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","sessionId":"gTwTrSOxWjKbBZqOMue0PWzcyx9EmJta","clientJoinRoomTime":1734944407276,"nodeId":"10.124.18.160:23a9de0f-b4ed-43da-8824-fba4a7a7e061","state":1,"startPushTime":0,"screen":false,"audio":true,"data":true,"isolationProfile":"no-isolation","enableNotifyEdgeStream":false,"appId":"671221aa298a540183df32d9","publish2RoomTime":1734944408424,"elapse":9,"messageId":"ef1eb6fc9781493c972aa53310e5bbe1","isBindToRoom":false,"roomId":"CozeRTC_H264_G711A_7451492670649778216","initStreamId":"MpUAkZdeNnYCbi3dnHGph8BTOpEBvIT3","attributes":{"videoCodecFlag":0,"firstFrameSessionId":0,"videoCodec":"H264","srcRoomId":"CozeRTC_H264_G711A_7451492670649778216","audiostream":true,"localaudio":true,"sourceSSRCs":{"audio":599195077,"audioRtx":1643896863,"video":[2090087488],"videoRtx":[173017711]},"extaudio":true,"localvideo":true,"extvideo":true,"publishTime":1734944408424,"videostream":true,"videoDescriptions":[{"width":240,"framerate":15,"height":240,"maxkbps":6000}],"clientRole":"normalUser"},"privateEnvId":"","isLicensePub":false}xV­ºþþþþþþþþþþþþþþ4Â(<œ
+1970-01-01 00:00:14.004 [I]  339  (): OnStreamAddEvent from roomid:CozeRTC_H264_G711A_7451492670649778216
+1970-01-01 00:00:14.013 [I]  838  (): put new stream attribute:2740d9adf3fa498f93785c2cca04875a
+1970-01-01 00:00:14.022 [I]  858  (): update new stream: 2740d9adf3fa498f93785c2cca04875a with stream name: uid_74514926706497618321
+1970-01-01 00:00:14.052 [I]  1213 ():  result 0x0
+1970-01-01 00:00:14.566 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:203 send_rate:196266 recv_rate:0 qdelay:0.000000 rdelay:0 overuse:0 over_thd:12.500000 delay_base:0 loss_base:1
+1970-01-01 00:00:14.571 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:14.594 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:14.617 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:14.624 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:14.637 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:14.651 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:14.672 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:14.952 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:14.953 [I]  1213 ():  result 0x0
+1970-01-01 00:00:15.663 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:40 send_rate:163919 recv_rate:185858 qdelay:-12.111835 rdelay:2 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:15.669 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:15.691 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:15.714 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:15.721 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:15.734 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:15.748 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:15.770 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:15.976 [I]  1213 ():  result 0x0
+1970-01-01 00:00:16.774 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:16.856 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:18 send_rate:163555 recv_rate:200192 qdelay:-4.705215 rdelay:51 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:16.863 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:16.885 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:16.908 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:16.915 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:16.928 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:16.942 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:16.973 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:16.974 [I]  1213 ():  result 0x0
+1970-01-01 00:00:17.176 [I]  779  (): ice send success 200 send failed 0
+1970-01-01 00:00:17.776 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:17.793 [I]  1213 ():  result 0x0
+1970-01-01 00:00:17.857 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:15 send_rate:143162 recv_rate:167370 qdelay:-11.507036 rdelay:29 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:17.864 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:17.886 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:17.909 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:17.916 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:17.929 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:17.943 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:18.777 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:18.799 [I]  1213 ():  result 0x0
+1970-01-01 00:00:18.860 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:46 send_rate:152440 recv_rate:146741 qdelay:-14.731011 rdelay:11 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:18.866 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:18.889 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:18.912 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:18.919 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:18.932 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:18.946 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:19.009 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:19.605 [I]  1213 ():  result 0x0
+1970-01-01 00:00:19.782 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 0 Ms
+1970-01-01 00:00:19.962 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:44 send_rate:151056 recv_rate:205904 qdelay:-12.464682 rdelay:2 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:19.968 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:19.990 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:20.013 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:20.020 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:20.033 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:20.047 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:20.674 [I]  1213 ():  result 0x0
+1970-01-01 00:00:20.787 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:20.950 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:21.059 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:21 send_rate:142353 recv_rate:189027 qdelay:-9.321410 rdelay:4 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:21.065 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:21.087 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:21.110 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:21.117 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:21.131 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:21.144 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:21.162 [I]  779  (): ice send success 400 send failed 0
+1970-01-01 00:00:21.571 [I]  1213 ():  result 0x0
+1970-01-01 00:00:21.791 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070307920 Ms
+1970-01-01 00:00:22.060 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:24 send_rate:138332 recv_rate:153088 qdelay:-10.460597 rdelay:1 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:22.160 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:22.172 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:22.195 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:22.202 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:22.215 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:22.229 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:22.652 [I]  1213 ():  result 0x0
+1970-01-01 00:00:22.793 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:22.935 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:23.088 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:50 send_rate:135668 recv_rate:164011 qdelay:-11.985858 rdelay:2 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:23.178 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:23.189 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:23.212 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:23.219 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:23.233 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:23.247 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:23.470 [I]  1213 ():  result 0x0
+1970-01-01 00:00:23.794 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:24.159 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:12 send_rate:105450 recv_rate:118436 qdelay:-11.940327 rdelay:5 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:24.302 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:24.314 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:24.337 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:24.344 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:24.358 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:24.371 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:24.477 [I]  1213 ():  result 0x0
+1970-01-01 00:00:24.795 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:25.137 [I]  779  (): ice send success 600 send failed 0
+1970-01-01 00:00:25.264 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:412 send_rate:258077 recv_rate:358054 qdelay:-6.882987 rdelay:18 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:25.374 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:25.386 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:25.409 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:25.416 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:25.429 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:25.443 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:25.490 [I]  1213 ():  result 0x0
+1970-01-01 00:00:25.796 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:26.336 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:155 send_rate:126171 recv_rate:199432 qdelay:-10.320944 rdelay:6 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:26.463 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:26.475 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:26.498 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:26.505 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:26.518 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:26.532 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:26.553 [I]  1213 ():  result 0x0
+1970-01-01 00:00:26.798 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:27.049 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:27.363 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:54 send_rate:142739 recv_rate:176419 qdelay:-10.732394 rdelay:8 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:27.370 [I]  1213 ():  result 0x0
+1970-01-01 00:00:27.666 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:27.677 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:27.700 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:27.707 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:27.721 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:27.735 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:27.799 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:28.381 [I]  1213 ():  result 0x0
+1970-01-01 00:00:28.462 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:32 send_rate:126896 recv_rate:158706 qdelay:-5.850738 rdelay:45 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:28.675 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:28.687 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:28.710 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:28.717 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:28.730 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:28.744 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:28.801 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:28.938 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:29.099 [I]  779  (): ice send success 800 send failed 0
+1970-01-01 00:00:29.188 [I]  1213 ():  result 0x0
+1970-01-01 00:00:29.464 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:40 send_rate:115389 recv_rate:99205 qdelay:-7.082942 rdelay:28 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:29.691 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:29.703 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:29.726 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:29.733 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:29.747 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:29.760 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:29.803 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:30.195 [I]  1213 ():  result 0x0
+1970-01-01 00:00:30.613 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:141 send_rate:168481 recv_rate:201935 qdelay:-9.307673 rdelay:1 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:30.765 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:30.777 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:30.800 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:30.807 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:30.820 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:30.834 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:30.857 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:30.938 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:31.059 [I]  1213 ():  result 0x0
+1970-01-01 00:00:31.708 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:105 send_rate:229828 recv_rate:258677 qdelay:-13.395125 rdelay:4 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:31.860 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:31.864 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:31.883 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:31.906 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:31.912 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:31.926 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:31.940 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:32.160 [I]  1213 ():  result 0x0
+1970-01-01 00:00:32.774 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:38 send_rate:168581 recv_rate:163113 qdelay:-8.135158 rdelay:5 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:32.861 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:32.867 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:32.884 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:32.907 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:32.914 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:32.927 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:32.941 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:32.968 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:32.970 [I]  1213 ():  result 0x0
+1970-01-01 00:00:33.135 [I]  779  (): ice send success 1000 send failed 0
+1970-01-01 00:00:33.864 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:21 send_rate:123582 recv_rate:181978 qdelay:-6.391315 rdelay:5 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:33.869 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:33.892 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:33.915 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:33.923 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:33.935 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:33.949 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:33.969 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:33.981 [I]  1213 ():  result 0x0
+1970-01-01 00:00:34.868 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:22 send_rate:123648 recv_rate:147200 qdelay:-12.518951 rdelay:2 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:34.874 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:34.897 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:34.920 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:34.927 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:34.940 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:34.954 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:34.975 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:34.976 [I]  1213 ():  result 0x0
+1970-01-01 00:00:34.977 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1009322872 Ms
+1970-01-01 00:00:35.799 [I]  1213 ():  result 0x0
+1970-01-01 00:00:35.988 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:36.006 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:153 send_rate:144842 recv_rate:204180 qdelay:-10.501506 rdelay:4 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:36.012 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:36.034 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:36.057 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:36.064 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:36.078 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:36.091 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:36.810 [I]  1213 ():  result 0x0
+1970-01-01 00:00:36.948 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:36.989 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:37.065 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:78 send_rate:106409 recv_rate:381924 qdelay:5.991192 rdelay:4 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:37.071 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:37.093 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:37.116 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:37.123 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:37.136 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:37.150 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:37.170 [I]  779  (): ice send success 1200 send failed 0
+1970-01-01 00:00:37.618 [I]  1213 ():  result 0x0
+1970-01-01 00:00:37.991 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1008278028 Ms
+1970-01-01 00:00:38.068 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:184 send_rate:97161 recv_rate:684651 qdelay:40.299103 rdelay:0 overuse:2 over_thd:6.398187 delay_base:0 loss_base:1
+1970-01-01 00:00:38.074 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:38.097 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:38.120 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:38.126 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:38.140 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:38.154 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:38.631 [I]  1213 ():  result 0x0
+1970-01-01 00:00:38.939 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:38.993 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1077428494 Ms
+1970-01-01 00:00:39.166 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:29 send_rate:141378 recv_rate:272000 qdelay:8.845127 rdelay:0 overuse:0 over_thd:6.000000 delay_base:1 loss_base:1
+1970-01-01 00:00:39.172 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:39.194 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:39.217 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:39.224 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:39.238 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:39.251 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:39.475 [I]  1213 ():  result 0x0
+1970-01-01 00:00:39.996 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:40.270 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:21 send_rate:159230 recv_rate:248089 qdelay:-12.975693 rdelay:1 overuse:1 over_thd:6.742498 delay_base:0 loss_base:1
+1970-01-01 00:00:40.276 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:40.298 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:40.321 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:40.328 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:40.342 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:40.356 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:40.579 [I]  1213 ():  result 0x0
+1970-01-01 00:00:40.937 [I]  2067 (): recv STUN packet ...
+1970-01-01 00:00:40.996 [I]  189  ():  IceAgent :  ICE_AGENT_STATE_READY --> ICE_AGENT_STATE_READY, Retry 1/0 Wait 1070252872 Ms
+1970-01-01 00:00:41.138 [I]  779  (): ice send success 1400 send failed 0
+1970-01-01 00:00:41.309 [I]  211  (): lite-cc bw:5000 loss:0.000000 rtt:58 send_rate:152680 recv_rate:185187 qdelay:-7.813696 rdelay:1 overuse:0 over_thd:6.000000 delay_base:0 loss_base:1
+1970-01-01 00:00:41.315 [I]  266  (): [network lite] sendside control info update: [audio forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:250 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:41.337 [I]  269  (): [network lite] sendside control info update: [video forward_rtx_cnt:0.000000 forward_dtx_rtx_cnt:0.000000 rtx_repeat_cnt:0 allow_max_delay:1000 delay_forward_ms:0 extra_resend_cnt_for_nack:0.000000 max_response_nack_cnt:0]
+1970-01-01 00:00:41.360 [I]  480  (): [network lite] packet history size = 0
+1970-01-01 00:00:41.367 [I]  483  (): [network lite ] forward rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:41.381 [I]  487  (): [network lite] positive rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:41.394 [I]  491  (): [network lite] multi rtx_stat: success:0 failed: 0 [bw:0 rtt:0 miss:0 max_times:0 f_max_delay:0 f_max_nack:0 tcc:0]
+1970-01-01 00:00:41.416 [I]  1213 ():  result 0x0

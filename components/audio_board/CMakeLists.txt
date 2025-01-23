@@ -115,6 +115,15 @@ set(COMPONENT_SRCS
 )
 endif()
 
+if (CONFIG_ESP32_S3_SPARKBOT_BOARD)
+message(STATUS "Current board name is " CONFIG_ESP32_S3_SPARKBOT_BOARD)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./esp32_s3_sparkbot)
+set(COMPONENT_SRCS
+./esp32_s3_sparkbot/board.c
+./esp32_s3_sparkbot/board_pins_config.c
+)
+endif()
+
 if (CONFIG_ESP32_C3_LYRA_V2_BOARD)
 message(STATUS "Current board name is " CONFIG_ESP32_C3_LYRA_V2_BOARD)
 list(APPEND COMPONENT_ADD_INCLUDEDIRS ./esp32_c3_lyra)
